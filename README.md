@@ -1,23 +1,21 @@
-# Brill: Your Bridge Playing Robot
+# Brill Python Prototype (Archived)
 
-**Brill** is your intelligent bridge-playing robot that combines rule-based logic with AI-driven strategy. Whether you're looking for a partner to play with, an opponent to challenge, or an oracle to answer your bridge questions, Brill delivers expert-level play. It adapts to user-defined rules and simulates optimal gameplay, making it the perfect tool for any bridge enthusiast.
+> **Status: Archived.** This was an early Python prototype exploring bridge bidding concepts. The project has been superseded by [BrillSolution](https://github.com/ThorvaldAagaard/BrillSolution), a full C#/.NET implementation with 170,000+ bidding rules, multiple cardplay engines, and cross-platform support.
 
-## Key Features
-- **Hybrid Decision-Making**: Leverages both rules-based logic and AI for expert decision-making.
-- **Customizable Rules**: Users can define and adjust rules to tailor the gameplay to different bridge variations.
-- **AI-Powered Continuation**: Once user-defined rules are exhausted, Brill intelligently simulates the best next move.
-- **Partner or Opponent**: Play in pair or team tournaments, or use Brill as your partner in practice games.
-- **Bridge Oracle**: Ask Brill questions like "Given this hand and the bidding, what should I bid now?" for expert advice.
-- **Open Source & Modular**: Extend Brill’s capabilities with ease for your own bridge projects.
+**Brill** was an early concept for an intelligent bridge-playing robot that combines rule-based logic with AI-driven strategy. The ideas explored here — a DSL for bidding rules, JSON-based bidding system definitions, and rule evaluation engines — have been carried forward into the production implementation.
+
+## What Was Explored Here
+
+- **Bidding System DSL** — A custom domain-specific language for defining bridge bidding rules with priorities, auction contexts, and hand requirements.
+- **JSON Bidding System** — A structured JSON format (with JSON Schema) for representing bidding rules, definitions, and rule sets.
+- **Rule Evaluation Engine** — Converting DSL conditions like `HCP >= 15 AND IsHandType("Balanced")` into evaluable Python expressions.
+- **Hand Analysis GUI** — A Kivy-based interface for evaluating hands against custom rules and generating hands matching criteria.
+- **Bridge System Editor** — An HTML-based editor for creating and editing bidding system JSON files.
 
 ## Technologies
-- **Python**: For flexibility and simplicity.
-- **JAX**: To harness the power of modern machine learning and high-performance computation.
 
-## Getting Started
-To use Brill, clone the repository and install the dependencies:
+- **Python** with Kivy (GUI), asteval (expression evaluation), redeal (hand generation)
 
-```bash
-git clone https://github.com/yourusername/brill.git
-cd brill
-pip install -r requirements.txt
+## See Also
+
+The production version of Brill is at [github.com/ThorvaldAagaard/BrillSolution](https://github.com/ThorvaldAagaard/BrillSolution).
